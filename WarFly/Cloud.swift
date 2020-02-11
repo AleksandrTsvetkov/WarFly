@@ -8,26 +8,13 @@
 
 import SpriteKit
 
-protocol GameBackgroundSpriteable {
-    static func populateSprite() -> Self
-    static func randomPoint() -> CGPoint
-}
-
-extension GameBackgroundSpriteable {
-    static func randomPoint() -> CGPoint {
-        let screen = UIScreen.main.bounds
-        let x: CGFloat = CGFloat.random(in: 0...screen.size.width)
-        let y: CGFloat = CGFloat.random(in: screen.size.height + 100...screen.size.height + 200)
-        return CGPoint(x: x, y: y)
-    }
-}
-
 final class Cloud: SKSpriteNode, GameBackgroundSpriteable {
-    static func populateSprite() -> Cloud {
+    static func populateSprite(at point: CGPoint?) -> Cloud {
         let cloudImageName = configureName()
         let cloud = Cloud(imageNamed: cloudImageName)
         cloud.setScale(randomScale)
-        cloud.position = randomPoint()
+        cloud.position = point ?? randomPoint()
+        cloud.name = "backgroundSprite"
         cloud.zPosition = 10
         cloud.run(move(from: cloud.position))
         return cloud
@@ -38,7 +25,7 @@ final class Cloud: SKSpriteNode, GameBackgroundSpriteable {
     }
     
     fileprivate static var randomScale: CGFloat {
-        return CGFloat.random(in: 1.5...2.5)
+        return CGFloat.random(in: 1.2...2.2)
     }
     
     fileprivate static func move(from point: CGPoint) -> SKAction {
