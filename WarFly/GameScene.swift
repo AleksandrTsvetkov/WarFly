@@ -15,27 +15,32 @@ class GameScene: SKScene {
     var player: SKSpriteNode!
     
     override func didMove(to view: SKView) {
+        configureStartScene()
+    }
+    
+    fileprivate func configureStartScene() {
         let screenCenterPoint = CGPoint(x: self.size.width / 2, y: self.size.height / 2)
         let background = Background.populateBackground(at: screenCenterPoint)
         background.size = self.size
         self.addChild(background)
         
         let screen = UIScreen.main.bounds
-        for _ in 1...5 {
-            let x: CGFloat = CGFloat.random(in: 0...screen.size.width)
-            let y: CGFloat = CGFloat.random(in: 0...screen.size.height)
-            let island = Island.populateSprite(at: CGPoint(x: x, y: y))
-            let cloud = Cloud.populateSprite(at: CGPoint(x: x, y: y))
-            self.addChild(island)
-            self.addChild(cloud)
-        }
-        player = PlayerPlane.populate(at: CGPoint(x: self.size.width / 2, y: 100))
+        
+        let island1 = Island.populateSprite(at: CGPoint(x: 100, y: 200))
+        self.addChild(island1)
+        
+        let island2 = Island.populateSprite(at: CGPoint(x: self.size.width - 100, y: self.size.height - 200))
+        self.addChild(island2)
+        
+        player = PlayerPlane.populate(at: CGPoint(x: screen.size.width / 2, y: 100))
         self.addChild(player)
+        
         motionManager.accelerometerUpdateInterval = 0.2
         motionManager.startAccelerometerUpdates(to: OperationQueue.current!) { (data, error) in
-            guard let data = data else { return }
-            let acceleration = data.acceleration
-            self.xAcceleration = CGFloat(acceleration.x * 0.7) + self.xAcceleration * 0.3
+            if let data = data {
+                let acceleration = data.acceleration
+                self.xAcceleration = CGFloat(acceleration.x) * 0.7 + self.xAcceleration * 0.3
+            }
         }
     }
     
