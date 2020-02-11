@@ -10,7 +10,6 @@
 		1F123F3023F2DB7800728779 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F123F2F23F2DB7800728779 /* AppDelegate.swift */; };
 		1F123F3623F2DB7800728779 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F123F3523F2DB7800728779 /* GameScene.swift */; };
 		1F123F3823F2DB7800728779 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F123F3723F2DB7800728779 /* GameViewController.swift */; };
-		1F123F3B23F2DB7800728779 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F123F3923F2DB7800728779 /* Main.storyboard */; };
 		1F123F3D23F2DB7900728779 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F123F3C23F2DB7900728779 /* Assets.xcassets */; };
 		1F123F4023F2DB7900728779 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F123F3E23F2DB7900728779 /* LaunchScreen.storyboard */; };
 		1F123F4823F2DDE300728779 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F123F4723F2DDE300728779 /* Background.swift */; };
@@ -19,6 +18,7 @@
 		1F123F4E23F314E900728779 /* PlayerPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F123F4D23F314E900728779 /* PlayerPlane.swift */; };
 		1F123F5023F3161C00728779 /* PlayerPlane.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 1F123F4F23F3161C00728779 /* PlayerPlane.atlas */; };
 		1F123F5223F3407300728779 /* GameBackgroundSpriteable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F123F5123F3407300728779 /* GameBackgroundSpriteable.swift */; };
+		1F123F5423F3583400728779 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F123F5323F3583400728779 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +26,6 @@
 		1F123F2F23F2DB7800728779 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F123F3523F2DB7800728779 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		1F123F3723F2DB7800728779 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		1F123F3A23F2DB7800728779 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F123F3C23F2DB7900728779 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F123F3F23F2DB7900728779 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F123F4123F2DB7900728779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +35,7 @@
 		1F123F4D23F314E900728779 /* PlayerPlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPlane.swift; sourceTree = "<group>"; };
 		1F123F4F23F3161C00728779 /* PlayerPlane.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerPlane.atlas; sourceTree = "<group>"; };
 		1F123F5123F3407300728779 /* GameBackgroundSpriteable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBackgroundSpriteable.swift; sourceTree = "<group>"; };
+		1F123F5323F3583400728779 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Main.storyboard; path = "WarFly/Supporting files/Main.storyboard"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,21 +68,45 @@
 		1F123F2E23F2DB7800728779 /* WarFly */ = {
 			isa = PBXGroup;
 			children = (
-				1F123F2F23F2DB7800728779 /* AppDelegate.swift */,
-				1F123F3523F2DB7800728779 /* GameScene.swift */,
-				1F123F3723F2DB7800728779 /* GameViewController.swift */,
-				1F123F3923F2DB7800728779 /* Main.storyboard */,
-				1F123F3C23F2DB7900728779 /* Assets.xcassets */,
+				1F123F5723F35B1300728779 /* Supporting files */,
+				1F123F5623F35B0800728779 /* Game */,
+				1F123F5523F35AE800728779 /* Models */,
+				1F123F4F23F3161C00728779 /* PlayerPlane.atlas */,
+			);
+			path = WarFly;
+			sourceTree = "<group>";
+		};
+		1F123F5523F35AE800728779 /* Models */ = {
+			isa = PBXGroup;
+			children = (
 				1F123F4723F2DDE300728779 /* Background.swift */,
 				1F123F4923F2FACA00728779 /* Island.swift */,
 				1F123F4B23F30EA700728779 /* Cloud.swift */,
-				1F123F5123F3407300728779 /* GameBackgroundSpriteable.swift */,
-				1F123F4F23F3161C00728779 /* PlayerPlane.atlas */,
 				1F123F4D23F314E900728779 /* PlayerPlane.swift */,
+				1F123F5123F3407300728779 /* GameBackgroundSpriteable.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1F123F5623F35B0800728779 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				1F123F3523F2DB7800728779 /* GameScene.swift */,
+				1F123F3723F2DB7800728779 /* GameViewController.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		1F123F5723F35B1300728779 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				1F123F5323F3583400728779 /* Main.storyboard */,
+				1F123F2F23F2DB7800728779 /* AppDelegate.swift */,
+				1F123F3C23F2DB7900728779 /* Assets.xcassets */,
 				1F123F3E23F2DB7900728779 /* LaunchScreen.storyboard */,
 				1F123F4123F2DB7900728779 /* Info.plist */,
 			);
-			path = WarFly;
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,10 +167,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F123F3B23F2DB7800728779 /* Main.storyboard in Resources */,
 				1F123F5023F3161C00728779 /* PlayerPlane.atlas in Resources */,
 				1F123F3D23F2DB7900728779 /* Assets.xcassets in Resources */,
 				1F123F4023F2DB7900728779 /* LaunchScreen.storyboard in Resources */,
+				1F123F5423F3583400728779 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,14 +195,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1F123F3923F2DB7800728779 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1F123F3A23F2DB7800728779 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1F123F3E23F2DB7900728779 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -310,7 +326,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P4RLTSR7RF;
-				INFOPLIST_FILE = WarFly/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/WarFly/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,7 +344,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P4RLTSR7RF;
-				INFOPLIST_FILE = WarFly/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/WarFly/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
