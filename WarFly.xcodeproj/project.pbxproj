@@ -8,26 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		1F123F3023F2DB7800728779 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F123F2F23F2DB7800728779 /* AppDelegate.swift */; };
-		1F123F3223F2DB7800728779 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1F123F3123F2DB7800728779 /* GameScene.sks */; };
-		1F123F3423F2DB7800728779 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1F123F3323F2DB7800728779 /* Actions.sks */; };
 		1F123F3623F2DB7800728779 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F123F3523F2DB7800728779 /* GameScene.swift */; };
 		1F123F3823F2DB7800728779 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F123F3723F2DB7800728779 /* GameViewController.swift */; };
 		1F123F3B23F2DB7800728779 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F123F3923F2DB7800728779 /* Main.storyboard */; };
 		1F123F3D23F2DB7900728779 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F123F3C23F2DB7900728779 /* Assets.xcassets */; };
 		1F123F4023F2DB7900728779 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F123F3E23F2DB7900728779 /* LaunchScreen.storyboard */; };
+		1F123F4823F2DDE300728779 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F123F4723F2DDE300728779 /* Background.swift */; };
+		1F123F4A23F2FACA00728779 /* Island.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F123F4923F2FACA00728779 /* Island.swift */; };
+		1F123F4C23F30EA700728779 /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F123F4B23F30EA700728779 /* Cloud.swift */; };
+		1F123F4E23F314E900728779 /* PlayerPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F123F4D23F314E900728779 /* PlayerPlane.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1F123F2C23F2DB7800728779 /* WarFly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WarFly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F123F2F23F2DB7800728779 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1F123F3123F2DB7800728779 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		1F123F3323F2DB7800728779 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		1F123F3523F2DB7800728779 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		1F123F3723F2DB7800728779 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		1F123F3A23F2DB7800728779 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F123F3C23F2DB7900728779 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F123F3F23F2DB7900728779 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F123F4123F2DB7900728779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F123F4723F2DDE300728779 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		1F123F4923F2FACA00728779 /* Island.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Island.swift; sourceTree = "<group>"; };
+		1F123F4B23F30EA700728779 /* Cloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
+		1F123F4D23F314E900728779 /* PlayerPlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPlane.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,12 +65,14 @@
 			isa = PBXGroup;
 			children = (
 				1F123F2F23F2DB7800728779 /* AppDelegate.swift */,
-				1F123F3123F2DB7800728779 /* GameScene.sks */,
-				1F123F3323F2DB7800728779 /* Actions.sks */,
 				1F123F3523F2DB7800728779 /* GameScene.swift */,
 				1F123F3723F2DB7800728779 /* GameViewController.swift */,
 				1F123F3923F2DB7800728779 /* Main.storyboard */,
 				1F123F3C23F2DB7900728779 /* Assets.xcassets */,
+				1F123F4723F2DDE300728779 /* Background.swift */,
+				1F123F4923F2FACA00728779 /* Island.swift */,
+				1F123F4B23F30EA700728779 /* Cloud.swift */,
+				1F123F4D23F314E900728779 /* PlayerPlane.swift */,
 				1F123F3E23F2DB7900728779 /* LaunchScreen.storyboard */,
 				1F123F4123F2DB7900728779 /* Info.plist */,
 			);
@@ -132,10 +138,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F123F3B23F2DB7800728779 /* Main.storyboard in Resources */,
-				1F123F3223F2DB7800728779 /* GameScene.sks in Resources */,
 				1F123F3D23F2DB7900728779 /* Assets.xcassets in Resources */,
 				1F123F4023F2DB7900728779 /* LaunchScreen.storyboard in Resources */,
-				1F123F3423F2DB7800728779 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,8 +151,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F123F3623F2DB7800728779 /* GameScene.swift in Sources */,
+				1F123F4E23F314E900728779 /* PlayerPlane.swift in Sources */,
+				1F123F4C23F30EA700728779 /* Cloud.swift in Sources */,
 				1F123F3823F2DB7800728779 /* GameViewController.swift in Sources */,
 				1F123F3023F2DB7800728779 /* AppDelegate.swift in Sources */,
+				1F123F4A23F2FACA00728779 /* Island.swift in Sources */,
+				1F123F4823F2DDE300728779 /* Background.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,7 +310,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mitment.WarFly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -320,7 +328,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mitment.WarFly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
