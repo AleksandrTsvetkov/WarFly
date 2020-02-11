@@ -17,6 +17,7 @@
 		1F123F4A23F2FACA00728779 /* Island.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F123F4923F2FACA00728779 /* Island.swift */; };
 		1F123F4C23F30EA700728779 /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F123F4B23F30EA700728779 /* Cloud.swift */; };
 		1F123F4E23F314E900728779 /* PlayerPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F123F4D23F314E900728779 /* PlayerPlane.swift */; };
+		1F123F5023F3161C00728779 /* PlayerPlane.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 1F123F4F23F3161C00728779 /* PlayerPlane.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		1F123F4923F2FACA00728779 /* Island.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Island.swift; sourceTree = "<group>"; };
 		1F123F4B23F30EA700728779 /* Cloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
 		1F123F4D23F314E900728779 /* PlayerPlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPlane.swift; sourceTree = "<group>"; };
+		1F123F4F23F3161C00728779 /* PlayerPlane.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerPlane.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				1F123F4723F2DDE300728779 /* Background.swift */,
 				1F123F4923F2FACA00728779 /* Island.swift */,
 				1F123F4B23F30EA700728779 /* Cloud.swift */,
+				1F123F4F23F3161C00728779 /* PlayerPlane.atlas */,
 				1F123F4D23F314E900728779 /* PlayerPlane.swift */,
 				1F123F3E23F2DB7900728779 /* LaunchScreen.storyboard */,
 				1F123F4123F2DB7900728779 /* Info.plist */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F123F3B23F2DB7800728779 /* Main.storyboard in Resources */,
+				1F123F5023F3161C00728779 /* PlayerPlane.atlas in Resources */,
 				1F123F3D23F2DB7900728779 /* Assets.xcassets in Resources */,
 				1F123F4023F2DB7900728779 /* LaunchScreen.storyboard in Resources */,
 			);
