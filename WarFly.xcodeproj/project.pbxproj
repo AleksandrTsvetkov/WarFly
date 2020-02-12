@@ -24,6 +24,9 @@
 		1F123F5D23F485AD00728779 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F123F5C23F485AD00728779 /* Enemy.swift */; };
 		1F123F5F23F4861100728779 /* Enemy_1.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 1F123F5E23F4861100728779 /* Enemy_1.atlas */; };
 		1F123F6123F48D7100728779 /* Enemy_2.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 1F123F6023F48D7100728779 /* Enemy_2.atlas */; };
+		1F123F6323F4A7DF00728779 /* BluePowerUp.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 1F123F6223F4A7DF00728779 /* BluePowerUp.atlas */; };
+		1F123F6523F4ADA800728779 /* BluePowerUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F123F6423F4ADA800728779 /* BluePowerUp.swift */; };
+		1F123F6723F4ADBC00728779 /* GreenPowerUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F123F6623F4ADBC00728779 /* GreenPowerUp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		1F123F5C23F485AD00728779 /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = SOURCE_ROOT; };
 		1F123F5E23F4861100728779 /* Enemy_1.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Enemy_1.atlas; sourceTree = "<group>"; };
 		1F123F6023F48D7100728779 /* Enemy_2.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Enemy_2.atlas; sourceTree = "<group>"; };
+		1F123F6223F4A7DF00728779 /* BluePowerUp.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = BluePowerUp.atlas; sourceTree = "<group>"; };
+		1F123F6423F4ADA800728779 /* BluePowerUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluePowerUp.swift; sourceTree = SOURCE_ROOT; };
+		1F123F6623F4ADBC00728779 /* GreenPowerUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenPowerUp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,8 @@
 		1F123F5523F35AE800728779 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1F123F6423F4ADA800728779 /* BluePowerUp.swift */,
+				1F123F6623F4ADBC00728779 /* GreenPowerUp.swift */,
 				1F123F5C23F485AD00728779 /* Enemy.swift */,
 				1F123F5A23F46D7300728779 /* PowerUp.swift */,
 				1F123F4723F2DDE300728779 /* Background.swift */,
@@ -119,6 +127,7 @@
 				1F123F5E23F4861100728779 /* Enemy_1.atlas */,
 				1F123F6023F48D7100728779 /* Enemy_2.atlas */,
 				1F123F5823F46D3F00728779 /* GreenPowerUp.atlas */,
+				1F123F6223F4A7DF00728779 /* BluePowerUp.atlas */,
 				1F123F4F23F3161C00728779 /* PlayerPlane.atlas */,
 			);
 			path = "Supporting files";
@@ -188,6 +197,7 @@
 				1F123F5923F46D3F00728779 /* GreenPowerUp.atlas in Resources */,
 				1F123F3D23F2DB7900728779 /* Assets.xcassets in Resources */,
 				1F123F4023F2DB7900728779 /* LaunchScreen.storyboard in Resources */,
+				1F123F6323F4A7DF00728779 /* BluePowerUp.atlas in Resources */,
 				1F123F5423F3583400728779 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,9 +213,11 @@
 				1F123F4E23F314E900728779 /* PlayerPlane.swift in Sources */,
 				1F123F4C23F30EA700728779 /* Cloud.swift in Sources */,
 				1F123F3823F2DB7800728779 /* GameViewController.swift in Sources */,
+				1F123F6523F4ADA800728779 /* BluePowerUp.swift in Sources */,
 				1F123F3023F2DB7800728779 /* AppDelegate.swift in Sources */,
 				1F123F4A23F2FACA00728779 /* Island.swift in Sources */,
 				1F123F5D23F485AD00728779 /* Enemy.swift in Sources */,
+				1F123F6723F4ADBC00728779 /* GreenPowerUp.swift in Sources */,
 				1F123F5223F3407300728779 /* GameBackgroundSpriteable.swift in Sources */,
 				1F123F5B23F46D7300728779 /* PowerUp.swift in Sources */,
 				1F123F4823F2DDE300728779 /* Background.swift in Sources */,

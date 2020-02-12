@@ -24,10 +24,18 @@ class GameScene: SKScene {
     }
     
     fileprivate func spawnPowerUp() {
-        let powerUp = PowerUp()
-        powerUp.performRotation()
-        powerUp.position = CGPoint(x: self.size.width / 2, y: self.size.height / 2)
-        self.addChild(powerUp)
+        let spawnAction = SKAction.run {
+            let randomNumber = Int.random(in: 0...1)
+            let powerUp = randomNumber == 1 ? BluePowerUp() : GreenPowerUp()
+            let randomPositionX = CGFloat.random(in: 53...self.size.width - 53)
+            powerUp.position = CGPoint(x: randomPositionX, y: self.size.height + 100)
+            powerUp.startMovement()
+            self.addChild(powerUp)
+        }
+        let waitAction = SKAction.wait(forDuration: Double.random(in: 10...20))
+        let sequence = SKAction.sequence([waitAction, spawnAction])
+        let repeatingSequence = SKAction.repeatForever(sequence)
+        self.run(repeatingSequence)
     }
     
     fileprivate func spawnEnemies() {
@@ -98,14 +106,12 @@ class GameScene: SKScene {
         
         player = PlayerPlane.populate(at: CGPoint(x: screen.size.width / 2, y: 60))
         self.addChild(player)
-        
-        
     }
     
     override func didSimulatePhysics() {
         player.checkPosition()
         enumerateChildNodes(withName: "sprite") { (node, stop) in
-            if node.position.y < -110 {
+            if node.position.y <= -110 {
                 node.removeFromParent()
             }
         }
