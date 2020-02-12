@@ -14,7 +14,7 @@ final class Cloud: SKSpriteNode, GameBackgroundSpriteable {
         let cloud = Cloud(imageNamed: cloudImageName)
         cloud.setScale(randomScale)
         cloud.position = point ?? randomPoint()
-        cloud.name = "backgroundSprite"
+        cloud.name = "sprite"
         cloud.zPosition = 10
         cloud.run(move(from: cloud.position))
         return cloud
