@@ -10,6 +10,12 @@ import SpriteKit
 
 class GameScene: SKScene {
     var player: PlayerPlane!
+    let scoreBackground = SKSpriteNode(imageNamed: "scores")
+    let scoreLabel = SKLabelNode(text: "10000")
+    let menuButton = SKSpriteNode(imageNamed: "menu")
+    let life1 = SKSpriteNode(imageNamed: "life")
+    let life2 = SKSpriteNode(imageNamed: "life")
+    let life3 = SKSpriteNode(imageNamed: "life")
     
     override func didMove(to view: SKView) {
         physicsWorld.contactDelegate = self
@@ -17,11 +23,15 @@ class GameScene: SKScene {
         configureStartScene()
         spawnClouds()
         spawnIslands()
-        DispatchQueue.main.asyncAfter(deadline: .now() + .nanoseconds(1)) { [unowned self] in
-            self.player.performFly()
-        }
+        self.player.performFly()
         spawnPowerUp()
         spawnEnemies()
+        configureUI()
+    }
+    
+    fileprivate func configureUI() {
+        scoreBackground.position = CGPoint(x: 0, y: 0)
+        
     }
     
     fileprivate func spawnPowerUp() {
@@ -102,10 +112,10 @@ class GameScene: SKScene {
         let island1 = Island.populateSprite(at: CGPoint(x: 100, y: 200))
         self.addChild(island1)
         
-        let island2 = Island.populateSprite(at: CGPoint(x: self.size.width - 100, y: self.size.height - 200))
+        let island2 = Island.populateSprite(at: CGPoint(x: self.size.width - 200, y: self.size.height - 200))
         self.addChild(island2)
         
-        player = PlayerPlane.populate(at: CGPoint(x: screen.size.width / 2, y: 60))
+        player = PlayerPlane.populate(at: CGPoint(x: screen.width / 2, y: 60))
         self.addChild(player)
     }
     

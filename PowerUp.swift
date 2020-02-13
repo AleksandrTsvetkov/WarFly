@@ -23,7 +23,18 @@ class PowerUp: SKSpriteNode {
         self.name = "sprite"
         self.setScale(0.7)
         self.zPosition = 20
-        self.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 52 * 0.7, height: 52 * 0.7))
+        let offsetX = self.frame.size.width * self.anchorPoint.x
+        let offsetY = self.frame.size.height * self.anchorPoint.y
+        let path = CGMutablePath()
+        path.move(to: CGPoint(x: 21 - offsetX, y: 29 - offsetY), transform: .identity)
+        path.addLine(to: CGPoint(x: 17 - offsetX, y: 32 - offsetY), transform: .identity)
+        path.addLine(to: CGPoint(x: 11 - offsetX, y: 29 - offsetY), transform: .identity)
+        path.addLine(to: CGPoint(x: 11 - offsetX, y: 20 - offsetY), transform: .identity)
+        path.addLine(to: CGPoint(x: 11 - offsetX, y: 9 - offsetY), transform: .identity)
+        path.addLine(to: CGPoint(x: 16 - offsetX, y: 5 - offsetY), transform: .identity)
+        path.addLine(to: CGPoint(x: 25 - offsetX, y: 8 - offsetY), transform: .identity)
+        path.closeSubpath()
+        self.physicsBody = SKPhysicsBody(polygonFrom: path)
         self.physicsBody?.isDynamic = true
         self.physicsBody?.categoryBitMask = BitMaskCategory.powerUp.rawValue
         self.physicsBody?.collisionBitMask = BitMaskCategory.player.rawValue

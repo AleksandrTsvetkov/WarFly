@@ -19,7 +19,28 @@ class Enemy: SKSpriteNode {
         self.yScale = -0.5
         self.zPosition = 20
         self.name = "sprite"
-        self.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 221 * 0.5, height: 204 * 0.5))
+        let offsetX = self.frame.size.width * self.anchorPoint.x
+        let offsetY = self.frame.size.height * self.anchorPoint.y
+        let path = CGMutablePath()
+        path.move(to: CGPoint(x: 59 - offsetX, y: 96 - offsetY), transform: .identity)
+        path.addLine(to: CGPoint(x: 50 - offsetX, y: 96 - offsetY), transform: .identity)
+        path.addLine(to: CGPoint(x: 48 - offsetX, y: 84 - offsetY), transform: .identity)
+        path.addLine(to: CGPoint(x: 31 - offsetX, y: 80 - offsetY), transform: .identity)
+        path.addLine(to: CGPoint(x: 7 - offsetX, y: 70 - offsetY), transform: .identity)
+        path.addLine(to: CGPoint(x: 7 - offsetX, y: 67 - offsetY), transform: .identity)
+        path.addLine(to: CGPoint(x: 46 - offsetX, y: 50 - offsetY), transform: .identity)
+        path.addLine(to: CGPoint(x: 52 - offsetX, y: 26 - offsetY), transform: .identity)
+        path.addLine(to: CGPoint(x: 40 - offsetX, y: 18 - offsetY), transform: .identity)
+        path.addLine(to: CGPoint(x: 40 - offsetX, y: 10 - offsetY), transform: .identity)
+        path.addLine(to: CGPoint(x: 54 - offsetX, y: 5 - offsetY), transform: .identity)
+        path.addLine(to: CGPoint(x: 71 - offsetX, y: 10 - offsetY), transform: .identity)
+        path.addLine(to: CGPoint(x: 72 - offsetX, y: 19 - offsetY), transform: .identity)
+        path.addLine(to: CGPoint(x: 61 - offsetX, y: 24 - offsetY), transform: .identity)
+        path.addLine(to: CGPoint(x: 64 - offsetX, y: 50 - offsetY), transform: .identity)
+        path.addLine(to: CGPoint(x: 103 - offsetX, y: 69 - offsetY), transform: .identity)
+        path.addLine(to: CGPoint(x: 67 - offsetX, y: 83 - offsetY), transform: .identity)
+        path.closeSubpath()
+        self.physicsBody = SKPhysicsBody(polygonFrom: path)
         self.physicsBody?.isDynamic = true
         self.physicsBody?.categoryBitMask = BitMaskCategory.enemy.rawValue
         self.physicsBody?.collisionBitMask = BitMaskCategory.player.rawValue | BitMaskCategory.shot.rawValue
