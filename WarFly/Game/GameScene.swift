@@ -12,6 +12,8 @@ class GameScene: SKScene {
     var player: PlayerPlane!
     
     override func didMove(to view: SKView) {
+        physicsWorld.contactDelegate = self
+        physicsWorld.gravity = CGVector.zero
         configureStartScene()
         spawnClouds()
         spawnIslands()
@@ -19,7 +21,6 @@ class GameScene: SKScene {
             self.player.performFly()
         }
         spawnPowerUp()
-        //spawnSpiralOfEnemies(count: 5)
         spawnEnemies()
     }
     
@@ -111,12 +112,12 @@ class GameScene: SKScene {
     override func didSimulatePhysics() {
         player.checkPosition()
         enumerateChildNodes(withName: "sprite") { (node, stop) in
-            if node.position.y <= -110 {
+            if node.position.y <= -100 {
                 node.removeFromParent()
             }
         }
         enumerateChildNodes(withName: "shotSprite") { (node, stop) in
-            if node.position.y >= self.size.height + 100 {
+            if node.position.y >= self.size.height + 90 {
                 node.removeFromParent()
             }
         }
@@ -133,4 +134,24 @@ class GameScene: SKScene {
         playerFire()
     }
     
+}
+
+extension GameScene: SKPhysicsContactDelegate {
+    func didBegin(_ contact: SKPhysicsContact) {
+        let contactCategory: BitMaskCategory = [contact.bodyA.category, contact.bodyB.category]
+        switch contactCategory {
+            case [.player, .enemy]:
+            print("Player vs enemy")
+            case [.shot, .enemy]:
+            print("Shot vs enemy")
+            case [.player, .powerUp]:
+            print("Player vs powerUp")
+            default:
+            preconditionFailure("Unable to detect collision category")
+        }
+    }
+    
+    func didEnd(_ contact: SKPhysicsContact) {
+        
+    }
 }

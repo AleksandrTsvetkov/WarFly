@@ -18,12 +18,17 @@ class Shot: SKSpriteNode {
     init(textureAtlas: SKTextureAtlas) {
         self.textureAtlas = textureAtlas
         let textureName = textureAtlas.textureNames.sorted()[0]
-        let texture = textureAtlas.textureNamed(textureName)
+        let texture1 = textureAtlas.textureNamed(textureName)
         textureNameBeginsWith = String(textureName.dropLast(6))
-        super.init(texture: texture, color: .clear, size: initialSize)
+        super.init(texture: texture1, color: .clear, size: initialSize)
         self.name = "shotSprite"
         self.setScale(0.3)
         self.zPosition = 30
+        self.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 187 * 0.3, height: 237 * 0.3))
+        self.physicsBody?.isDynamic = false
+        self.physicsBody?.categoryBitMask = BitMaskCategory.shot.rawValue
+        self.physicsBody?.collisionBitMask = BitMaskCategory.enemy.rawValue
+        self.physicsBody?.contactTestBitMask = BitMaskCategory.enemy.rawValue
     }
     
     required init?(coder aDecoder: NSCoder) {

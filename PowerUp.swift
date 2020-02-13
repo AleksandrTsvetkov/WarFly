@@ -17,12 +17,17 @@ class PowerUp: SKSpriteNode {
     init(textureAtlas: SKTextureAtlas) {
         self.textureAtlas = textureAtlas
         let textureName = textureAtlas.textureNames.sorted()[0]
-        let texture = textureAtlas.textureNamed(textureName)
+        let texture1 = textureAtlas.textureNamed(textureName)
         textureNameBeginsWith = String(textureName.dropLast(6))
-        super.init(texture: texture, color: .clear, size: initialSize)
+        super.init(texture: texture1, color: .clear, size: initialSize)
         self.name = "sprite"
         self.setScale(0.7)
         self.zPosition = 20
+        self.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 52 * 0.7, height: 52 * 0.7))
+        self.physicsBody?.isDynamic = true
+        self.physicsBody?.categoryBitMask = BitMaskCategory.powerUp.rawValue
+        self.physicsBody?.collisionBitMask = BitMaskCategory.player.rawValue
+        self.physicsBody?.contactTestBitMask = BitMaskCategory.player.rawValue
     }
     
     required init?(coder aDecoder: NSCoder) {

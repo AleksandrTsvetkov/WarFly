@@ -26,6 +26,23 @@ class PlayerPlane: SKSpriteNode {
         playerPlane.setScale(0.5)
         playerPlane.position = point
         playerPlane.zPosition = 40
+        let offsetX = playerPlane.frame.size.width * playerPlane.anchorPoint.x
+        let offsetY = playerPlane.frame.size.height * playerPlane.anchorPoint.y
+        let path = CGMutablePath()
+        path.move(to: CGPoint(x: 8 - offsetX, y: 77 - offsetY), transform: .identity)
+        path.addLine(to: CGPoint(x: 8 - offsetX, y: 65 - offsetY), transform: .identity)
+        path.addLine(to: CGPoint(x: 64 - offsetX, y: 57 - offsetY), transform: .identity)
+        path.addLine(to: CGPoint(x: 72 - offsetX, y: 24 - offsetY), transform: .identity)
+        path.addLine(to: CGPoint(x: 56 - offsetX, y: 20 - offsetY), transform: .identity)
+        path.addLine(to: CGPoint(x: 56 - offsetX, y: 10 - offsetY), transform: .identity)
+        path.addLine(to: CGPoint(x: 74 - offsetX, y: 4 - offsetY), transform: .identity)
+        path.addLine(to: CGPoint(x: 94 - offsetX, y: 8 - offsetY), transform: .identity)
+        path.closeSubpath()
+        playerPlane.physicsBody = SKPhysicsBody(polygonFrom: path)
+        playerPlane.physicsBody?.isDynamic = false
+        playerPlane.physicsBody?.categoryBitMask = BitMaskCategory.player.rawValue
+        playerPlane.physicsBody?.collisionBitMask = BitMaskCategory.enemy.rawValue | BitMaskCategory.powerUp.rawValue
+        playerPlane.physicsBody?.contactTestBitMask = BitMaskCategory.enemy.rawValue | BitMaskCategory.powerUp.rawValue
         return playerPlane
     }
     

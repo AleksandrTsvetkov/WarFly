@@ -13,12 +13,17 @@ class Enemy: SKSpriteNode {
     var enemyTexture: SKTexture!
     
     init(enemyTexture: SKTexture) {
-        let texture = enemyTexture
-        super.init(texture: texture, color: .clear, size: CGSize(width: 221, height: 204))
+        let texture1 = enemyTexture
+        super.init(texture: texture1, color: .clear, size: CGSize(width: 221, height: 204))
         self.xScale = 0.5
         self.yScale = -0.5
         self.zPosition = 20
         self.name = "sprite"
+        self.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 221 * 0.5, height: 204 * 0.5))
+        self.physicsBody?.isDynamic = true
+        self.physicsBody?.categoryBitMask = BitMaskCategory.enemy.rawValue
+        self.physicsBody?.collisionBitMask = BitMaskCategory.player.rawValue | BitMaskCategory.shot.rawValue
+        self.physicsBody?.contactTestBitMask = BitMaskCategory.player.rawValue | BitMaskCategory.shot.rawValue
     }
     
     func flySpiral() {
