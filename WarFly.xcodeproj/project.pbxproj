@@ -43,6 +43,9 @@
 		1FB101C023F6367900F977D9 /* EnemyExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FB101BE23F6367900F977D9 /* EnemyExplosion.sks */; };
 		1FB101C123F6367900F977D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FB101BF23F6367900F977D9 /* Assets.xcassets */; };
 		1FB101C323F6D71A00F977D9 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB101C223F6D71A00F977D9 /* GameOverScene.swift */; };
+		1FB101C623F7058000F977D9 /* hitSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1FB101C423F7058000F977D9 /* hitSound.wav */; };
+		1FB101C723F7058000F977D9 /* backgroundMusic.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 1FB101C523F7058000F977D9 /* backgroundMusic.m4a */; };
+		1FB101C923F707BB00F977D9 /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB101C823F707BB00F977D9 /* GameSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +87,9 @@
 		1FB101BE23F6367900F977D9 /* EnemyExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = EnemyExplosion.sks; path = WarFly/Game/EnemyExplosion.sks; sourceTree = SOURCE_ROOT; };
 		1FB101BF23F6367900F977D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = WarFly/Game/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		1FB101C223F6D71A00F977D9 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameOverScene.swift; path = WarFly/Models/GameOverScene.swift; sourceTree = SOURCE_ROOT; };
+		1FB101C423F7058000F977D9 /* hitSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hitSound.wav; sourceTree = "<group>"; };
+		1FB101C523F7058000F977D9 /* backgroundMusic.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = backgroundMusic.m4a; sourceTree = "<group>"; };
+		1FB101C823F707BB00F977D9 /* GameSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameSettings.swift; path = WarFly/Game/GameSettings.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +171,9 @@
 		1F123F5723F35B1300728779 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				1FB101C823F707BB00F977D9 /* GameSettings.swift */,
+				1FB101C523F7058000F977D9 /* backgroundMusic.m4a */,
+				1FB101C423F7058000F977D9 /* hitSound.wav */,
 				1FB101B623F621E500F977D9 /* SceneManager.swift */,
 				1F123F2F23F2DB7800728779 /* AppDelegate.swift */,
 				1F123F6F23F4B5FA00728779 /* Assets.swift */,
@@ -249,6 +258,7 @@
 			files = (
 				1F123F6123F48D7100728779 /* Enemy_2.atlas in Resources */,
 				1F123F5F23F4861100728779 /* Enemy_1.atlas in Resources */,
+				1FB101C723F7058000F977D9 /* backgroundMusic.m4a in Resources */,
 				1FB101C123F6367900F977D9 /* Assets.xcassets in Resources */,
 				1F123F5023F3161C00728779 /* PlayerPlane.atlas in Resources */,
 				1F123F6923F4B1F500728779 /* YellowAmmo.atlas in Resources */,
@@ -257,6 +267,7 @@
 				1FB101C023F6367900F977D9 /* EnemyExplosion.sks in Resources */,
 				1F123F4023F2DB7900728779 /* LaunchScreen.storyboard in Resources */,
 				1F123F6323F4A7DF00728779 /* BluePowerUp.atlas in Resources */,
+				1FB101C623F7058000F977D9 /* hitSound.wav in Resources */,
 				1F123F5423F3583400728779 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +281,7 @@
 			files = (
 				1F123F3623F2DB7800728779 /* GameScene.swift in Sources */,
 				1F123F6E23F4B49E00728779 /* YellowShot.swift in Sources */,
+				1FB101C923F707BB00F977D9 /* GameSettings.swift in Sources */,
 				1F123F4E23F314E900728779 /* PlayerPlane.swift in Sources */,
 				1F123F4C23F30EA700728779 /* Cloud.swift in Sources */,
 				1F123F3823F2DB7800728779 /* GameViewController.swift in Sources */,

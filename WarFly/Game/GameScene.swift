@@ -10,6 +10,7 @@ import SpriteKit
 
 class GameScene: ParentScene {
     
+    var backgroundMusic: SKAudioNode!
     fileprivate var player: PlayerPlane!
     fileprivate let hud = HUD()
     fileprivate let screenSize = UIScreen.main.bounds.size
@@ -35,6 +36,13 @@ class GameScene: ParentScene {
     }
     
     override func didMove(to view: SKView) {
+        gameSettings.loadGameSettings()
+        if gameSettings.isMusic && backgroundMusic != nil {
+            if let musicURL = Bundle.main.url(forResource: "backgroundMusic", withExtension: "m4a") {
+                backgroundMusic = SKAudioNode(url: musicURL)
+                addChild(backgroundMusic)
+            }
+        }
         self.scene?.isPaused = false
         guard sceneManager.gameScene == nil else { return }
         sceneManager.gameScene = self
@@ -216,6 +224,8 @@ extension GameScene: SKPhysicsContactDelegate {
                 }
                 
                 if lives == 0 {
+                    gameSettings.currentScore = hud.score
+                    gameSettings.saveScore()
                     let transition = SKTransition.doorsCloseVertical(withDuration: 1)
                     let gameOverScene = GameOverScene(size: self.size)
                     gameOverScene.scaleMode = .aspectFill
@@ -224,11 +234,16 @@ extension GameScene: SKPhysicsContactDelegate {
             
             case [.shot, .enemy]:
                 hud.score += 5
-                contact.bodyA.node?.removeFromParent()
-                contact.bodyB.node?.removeFromParent()
-                addChild(explosion!)
-                self.run(waitForExplosionAction) {
-                    explosion?.removeFromParent()
+                if contact.bodyA.node?.parent != nil && contact.bodyB.node?.parent != nil {
+                    if gameSettings.isSound {
+                        self.run(SKAction.playSoundFileNamed("hitSound", waitForCompletion: false))
+                    }
+                    contact.bodyA.node?.removeFromParent()
+                    contact.bodyB.node?.removeFromParent()
+                    addChild(explosion!)
+                    self.run(waitForExplosionAction) {
+                        explosion?.removeFromParent()
+                    }
             }
             case [.player, .powerUp]:
                 if contact.bodyA.node?.parent != nil && contact.bodyB.node?.parent != nil {
