@@ -33,6 +33,10 @@
 		1F123F7023F4B5FA00728779 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F123F6F23F4B5FA00728779 /* Assets.swift */; };
 		1F123F7223F4BAAD00728779 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F123F7123F4BAAD00728779 /* MenuScene.swift */; };
 		1F123F7423F4BDCE00728779 /* BitMaskCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F123F7323F4BDCE00728779 /* BitMaskCategory.swift */; };
+		1FB101B123F5F8B400F977D9 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB101B023F5F8B400F977D9 /* HUD.swift */; };
+		1FB101B323F5FAE000F977D9 /* PauseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB101B223F5FAE000F977D9 /* PauseScene.swift */; };
+		1FB101B523F5FCC900F977D9 /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB101B423F5FCC900F977D9 /* ButtonNode.swift */; };
+		1FB101B723F621E500F977D9 /* SceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB101B623F621E500F977D9 /* SceneManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +68,10 @@
 		1F123F6F23F4B5FA00728779 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = SOURCE_ROOT; };
 		1F123F7123F4BAAD00728779 /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuScene.swift; path = "WarFly/Supporting files/MenuScene.swift"; sourceTree = SOURCE_ROOT; };
 		1F123F7323F4BDCE00728779 /* BitMaskCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitMaskCategory.swift; sourceTree = SOURCE_ROOT; };
+		1FB101B023F5F8B400F977D9 /* HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = SOURCE_ROOT; };
+		1FB101B223F5FAE000F977D9 /* PauseScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseScene.swift; sourceTree = "<group>"; };
+		1FB101B423F5FCC900F977D9 /* ButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ButtonNode.swift; path = "WarFly/Supporting files/ButtonNode.swift"; sourceTree = SOURCE_ROOT; };
+		1FB101B623F621E500F977D9 /* SceneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneManager.swift; path = WarFly/Models/SceneManager.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +115,7 @@
 		1F123F5523F35AE800728779 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1FB101B423F5FCC900F977D9 /* ButtonNode.swift */,
 				1F123F7323F4BDCE00728779 /* BitMaskCategory.swift */,
 				1F123F6D23F4B49E00728779 /* YellowShot.swift */,
 				1F123F6B23F4B2AD00728779 /* Shot.swift */,
@@ -126,6 +135,8 @@
 		1F123F5623F35B0800728779 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				1FB101B023F5F8B400F977D9 /* HUD.swift */,
+				1FB101B223F5FAE000F977D9 /* PauseScene.swift */,
 				1F123F7123F4BAAD00728779 /* MenuScene.swift */,
 				1F123F3523F2DB7800728779 /* GameScene.swift */,
 				1F123F3723F2DB7800728779 /* GameViewController.swift */,
@@ -136,6 +147,7 @@
 		1F123F5723F35B1300728779 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				1FB101B623F621E500F977D9 /* SceneManager.swift */,
 				1F123F2F23F2DB7800728779 /* AppDelegate.swift */,
 				1F123F6F23F4B5FA00728779 /* Assets.swift */,
 				1F123F5323F3583400728779 /* Main.storyboard */,
@@ -242,8 +254,11 @@
 				1F123F4C23F30EA700728779 /* Cloud.swift in Sources */,
 				1F123F3823F2DB7800728779 /* GameViewController.swift in Sources */,
 				1F123F6523F4ADA800728779 /* BluePowerUp.swift in Sources */,
+				1FB101B323F5FAE000F977D9 /* PauseScene.swift in Sources */,
 				1F123F3023F2DB7800728779 /* AppDelegate.swift in Sources */,
 				1F123F4A23F2FACA00728779 /* Island.swift in Sources */,
+				1FB101B523F5FCC900F977D9 /* ButtonNode.swift in Sources */,
+				1FB101B723F621E500F977D9 /* SceneManager.swift in Sources */,
 				1F123F7023F4B5FA00728779 /* Assets.swift in Sources */,
 				1F123F5D23F485AD00728779 /* Enemy.swift in Sources */,
 				1F123F6723F4ADBC00728779 /* GreenPowerUp.swift in Sources */,
@@ -251,6 +266,7 @@
 				1F123F5B23F46D7300728779 /* PowerUp.swift in Sources */,
 				1F123F7423F4BDCE00728779 /* BitMaskCategory.swift in Sources */,
 				1F123F7223F4BAAD00728779 /* MenuScene.swift in Sources */,
+				1FB101B123F5F8B400F977D9 /* HUD.swift in Sources */,
 				1F123F6C23F4B2AD00728779 /* Shot.swift in Sources */,
 				1F123F4823F2DDE300728779 /* Background.swift in Sources */,
 			);
@@ -391,6 +407,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P4RLTSR7RF;
 				INFOPLIST_FILE = "$(SRCROOT)/WarFly/Supporting files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -409,6 +426,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P4RLTSR7RF;
 				INFOPLIST_FILE = "$(SRCROOT)/WarFly/Supporting files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

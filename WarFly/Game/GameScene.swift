@@ -9,15 +9,14 @@
 import SpriteKit
 
 class GameScene: SKScene {
-    var player: PlayerPlane!
-    let scoreBackground = SKSpriteNode(imageNamed: "scores")
-    let scoreLabel = SKLabelNode(text: "10000")
-    let menuButton = SKSpriteNode(imageNamed: "menu")
-    let life1 = SKSpriteNode(imageNamed: "life")
-    let life2 = SKSpriteNode(imageNamed: "life")
-    let life3 = SKSpriteNode(imageNamed: "life")
+    let sceneManager = SceneManager.shared
+    fileprivate var player: PlayerPlane!
+    fileprivate let hud = HUD()
+    fileprivate let screenSize = UIScreen.main.bounds.size
     
     override func didMove(to view: SKView) {
+        guard sceneManager.gameScene == nil else { return }
+        sceneManager.gameScene = self
         physicsWorld.contactDelegate = self
         physicsWorld.gravity = CGVector.zero
         configureStartScene()
@@ -26,12 +25,12 @@ class GameScene: SKScene {
         self.player.performFly()
         spawnPowerUp()
         spawnEnemies()
-        configureUI()
+        createHUD()
     }
     
-    fileprivate func configureUI() {
-        scoreBackground.position = CGPoint(x: 0, y: 0)
-        
+    fileprivate func createHUD() {
+        self.addChild(hud)
+        hud.configureUI(screenSize: screenSize)
     }
     
     fileprivate func spawnPowerUp() {
@@ -141,9 +140,17 @@ class GameScene: SKScene {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        playerFire()
+        let location = touches.first!.location(in: self)
+        let node = self.atPoint(location)
+        if node.name == "pause" {
+            let transition = SKTransition.doorway(withDuration: 1)
+            let pauseScene = PauseScene(size: self.size)
+            pauseScene.scaleMode = .aspectFill
+            self.scene?.view?.presentScene(pauseScene, transition: transition)
+        } else {
+            playerFire()
+        }
     }
-    
 }
 
 extension GameScene: SKPhysicsContactDelegate {

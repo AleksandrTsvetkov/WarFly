@@ -77,7 +77,7 @@ class PlayerPlane: SKSpriteNode {
     }
     
     func checkPosition() {
-        self.position.x = xAcceleration * 50
+        self.position.x += xAcceleration * 50
         if self.position.x < -70 {
             self.position.x = screenSize.width + 70
         } else if self.position.x > screenSize.width + 70 {
