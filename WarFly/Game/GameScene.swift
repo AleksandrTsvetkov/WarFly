@@ -8,13 +8,14 @@
 
 import SpriteKit
 
-class GameScene: SKScene {
-    let sceneManager = SceneManager.shared
+class GameScene: ParentScene {
+    
     fileprivate var player: PlayerPlane!
     fileprivate let hud = HUD()
     fileprivate let screenSize = UIScreen.main.bounds.size
     
     override func didMove(to view: SKView) {
+        self.scene?.isPaused = false
         guard sceneManager.gameScene == nil else { return }
         sceneManager.gameScene = self
         physicsWorld.contactDelegate = self
@@ -146,6 +147,8 @@ class GameScene: SKScene {
             let transition = SKTransition.doorway(withDuration: 1)
             let pauseScene = PauseScene(size: self.size)
             pauseScene.scaleMode = .aspectFill
+            sceneManager.gameScene = self
+            self.scene?.isPaused = true
             self.scene?.view?.presentScene(pauseScene, transition: transition)
         } else {
             playerFire()

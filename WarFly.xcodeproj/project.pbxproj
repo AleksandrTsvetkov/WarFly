@@ -37,6 +37,9 @@
 		1FB101B323F5FAE000F977D9 /* PauseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB101B223F5FAE000F977D9 /* PauseScene.swift */; };
 		1FB101B523F5FCC900F977D9 /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB101B423F5FCC900F977D9 /* ButtonNode.swift */; };
 		1FB101B723F621E500F977D9 /* SceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB101B623F621E500F977D9 /* SceneManager.swift */; };
+		1FB101B923F628A800F977D9 /* ParentScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB101B823F628A800F977D9 /* ParentScene.swift */; };
+		1FB101BB23F62AD100F977D9 /* OptionsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB101BA23F62AD100F977D9 /* OptionsScene.swift */; };
+		1FB101BD23F6322900F977D9 /* BestScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB101BC23F6322900F977D9 /* BestScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +75,9 @@
 		1FB101B223F5FAE000F977D9 /* PauseScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseScene.swift; sourceTree = "<group>"; };
 		1FB101B423F5FCC900F977D9 /* ButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ButtonNode.swift; path = "WarFly/Supporting files/ButtonNode.swift"; sourceTree = SOURCE_ROOT; };
 		1FB101B623F621E500F977D9 /* SceneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneManager.swift; path = WarFly/Models/SceneManager.swift; sourceTree = SOURCE_ROOT; };
+		1FB101B823F628A800F977D9 /* ParentScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentScene.swift; sourceTree = SOURCE_ROOT; };
+		1FB101BA23F62AD100F977D9 /* OptionsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsScene.swift; sourceTree = "<group>"; };
+		1FB101BC23F6322900F977D9 /* BestScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestScene.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +141,9 @@
 		1F123F5623F35B0800728779 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				1FB101BC23F6322900F977D9 /* BestScene.swift */,
+				1FB101B823F628A800F977D9 /* ParentScene.swift */,
+				1FB101BA23F62AD100F977D9 /* OptionsScene.swift */,
 				1FB101B023F5F8B400F977D9 /* HUD.swift */,
 				1FB101B223F5FAE000F977D9 /* PauseScene.swift */,
 				1F123F7123F4BAAD00728779 /* MenuScene.swift */,
@@ -262,13 +271,16 @@
 				1F123F7023F4B5FA00728779 /* Assets.swift in Sources */,
 				1F123F5D23F485AD00728779 /* Enemy.swift in Sources */,
 				1F123F6723F4ADBC00728779 /* GreenPowerUp.swift in Sources */,
+				1FB101BD23F6322900F977D9 /* BestScene.swift in Sources */,
 				1F123F5223F3407300728779 /* GameBackgroundSpriteable.swift in Sources */,
 				1F123F5B23F46D7300728779 /* PowerUp.swift in Sources */,
+				1FB101B923F628A800F977D9 /* ParentScene.swift in Sources */,
 				1F123F7423F4BDCE00728779 /* BitMaskCategory.swift in Sources */,
 				1F123F7223F4BAAD00728779 /* MenuScene.swift in Sources */,
 				1FB101B123F5F8B400F977D9 /* HUD.swift in Sources */,
 				1F123F6C23F4B2AD00728779 /* Shot.swift in Sources */,
 				1F123F4823F2DDE300728779 /* Background.swift in Sources */,
+				1FB101BB23F62AD100F977D9 /* OptionsScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

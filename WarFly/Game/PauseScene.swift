@@ -8,13 +8,10 @@
 
 import SpriteKit
 
-class PauseScene: SKScene {
-    let sceneManager = SceneManager.shared
+class PauseScene: ParentScene {
+    
     override func didMove(to view: SKView) {
-        self.backgroundColor = SKColor(red: 0.15, green: 0.15, blue: 0.3, alpha: 1)
-        let header = ButtonNode(titled: "pause", backgroundName: "header_background")
-        header.position = CGPoint(x: self.frame.midX, y: self.frame.midY + 150)
-        self.addChild(header)
+        setHeaderAndBackground(with: "paus", andBackground: "header_background")
         
         let titles = ["restart", "options", "resume"]
         for (index, title) in titles.enumerated() {
@@ -23,6 +20,14 @@ class PauseScene: SKScene {
             button.name = title
             button.label.name = title
             addChild(button)
+        }
+    }
+    
+    override func update(_ currentTime: TimeInterval) {
+        if let gameScene = sceneManager.gameScene {
+            if !gameScene.isPaused {
+                gameScene.isPaused = true
+            }
         }
     }
     
@@ -40,6 +45,12 @@ class PauseScene: SKScene {
             guard let gameScene = sceneManager.gameScene else { return }
             gameScene.scaleMode = .aspectFill
             self.scene?.view?.presentScene(gameScene, transition: transition)
+        } else if node.name == "options" {
+            let transition = SKTransition.crossFade(withDuration: 1)
+            let optionScene = OptionsScene(size: self.size)
+            optionScene.backScene = self
+            optionScene.scaleMode = .aspectFill
+            self.scene?.view?.presentScene(optionScene, transition: transition)
         }
     }
 }
