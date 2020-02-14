@@ -40,6 +40,9 @@
 		1FB101B923F628A800F977D9 /* ParentScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB101B823F628A800F977D9 /* ParentScene.swift */; };
 		1FB101BB23F62AD100F977D9 /* OptionsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB101BA23F62AD100F977D9 /* OptionsScene.swift */; };
 		1FB101BD23F6322900F977D9 /* BestScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB101BC23F6322900F977D9 /* BestScene.swift */; };
+		1FB101C023F6367900F977D9 /* EnemyExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1FB101BE23F6367900F977D9 /* EnemyExplosion.sks */; };
+		1FB101C123F6367900F977D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FB101BF23F6367900F977D9 /* Assets.xcassets */; };
+		1FB101C323F6D71A00F977D9 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB101C223F6D71A00F977D9 /* GameOverScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +81,9 @@
 		1FB101B823F628A800F977D9 /* ParentScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentScene.swift; sourceTree = SOURCE_ROOT; };
 		1FB101BA23F62AD100F977D9 /* OptionsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsScene.swift; sourceTree = "<group>"; };
 		1FB101BC23F6322900F977D9 /* BestScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestScene.swift; sourceTree = SOURCE_ROOT; };
+		1FB101BE23F6367900F977D9 /* EnemyExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = EnemyExplosion.sks; path = WarFly/Game/EnemyExplosion.sks; sourceTree = SOURCE_ROOT; };
+		1FB101BF23F6367900F977D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = WarFly/Game/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		1FB101C223F6D71A00F977D9 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameOverScene.swift; path = WarFly/Models/GameOverScene.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,8 @@
 		1F123F5523F35AE800728779 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1FB101BE23F6367900F977D9 /* EnemyExplosion.sks */,
+				1FB101BF23F6367900F977D9 /* Assets.xcassets */,
 				1FB101B423F5FCC900F977D9 /* ButtonNode.swift */,
 				1F123F7323F4BDCE00728779 /* BitMaskCategory.swift */,
 				1F123F6D23F4B49E00728779 /* YellowShot.swift */,
@@ -141,6 +149,7 @@
 		1F123F5623F35B0800728779 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				1FB101C223F6D71A00F977D9 /* GameOverScene.swift */,
 				1FB101BC23F6322900F977D9 /* BestScene.swift */,
 				1FB101B823F628A800F977D9 /* ParentScene.swift */,
 				1FB101BA23F62AD100F977D9 /* OptionsScene.swift */,
@@ -240,10 +249,12 @@
 			files = (
 				1F123F6123F48D7100728779 /* Enemy_2.atlas in Resources */,
 				1F123F5F23F4861100728779 /* Enemy_1.atlas in Resources */,
+				1FB101C123F6367900F977D9 /* Assets.xcassets in Resources */,
 				1F123F5023F3161C00728779 /* PlayerPlane.atlas in Resources */,
 				1F123F6923F4B1F500728779 /* YellowAmmo.atlas in Resources */,
 				1F123F5923F46D3F00728779 /* GreenPowerUp.atlas in Resources */,
 				1F123F3D23F2DB7900728779 /* Assets.xcassets in Resources */,
+				1FB101C023F6367900F977D9 /* EnemyExplosion.sks in Resources */,
 				1F123F4023F2DB7900728779 /* LaunchScreen.storyboard in Resources */,
 				1F123F6323F4A7DF00728779 /* BluePowerUp.atlas in Resources */,
 				1F123F5423F3583400728779 /* Main.storyboard in Resources */,
@@ -267,6 +278,7 @@
 				1F123F3023F2DB7800728779 /* AppDelegate.swift in Sources */,
 				1F123F4A23F2FACA00728779 /* Island.swift in Sources */,
 				1FB101B523F5FCC900F977D9 /* ButtonNode.swift in Sources */,
+				1FB101C323F6D71A00F977D9 /* GameOverScene.swift in Sources */,
 				1FB101B723F621E500F977D9 /* SceneManager.swift in Sources */,
 				1F123F7023F4B5FA00728779 /* Assets.swift in Sources */,
 				1F123F5D23F485AD00728779 /* Enemy.swift in Sources */,
