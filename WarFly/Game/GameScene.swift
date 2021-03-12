@@ -37,7 +37,7 @@ class GameScene: ParentScene {
     
     override func didMove(to view: SKView) {
         gameSettings.loadGameSettings()
-        if gameSettings.isMusic && backgroundMusic != nil {
+        if gameSettings.isMusic && backgroundMusic == nil {
             if let musicURL = Bundle.main.url(forResource: "backgroundMusic", withExtension: "m4a") {
                 backgroundMusic = SKAudioNode(url: musicURL)
                 addChild(backgroundMusic)
